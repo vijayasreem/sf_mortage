@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+  <nameField>Name</nameField>
+  <fields>
+    <fullName>Encrypted_ID__c</fullName>
+    <externalId>false</externalId>
+    <label>Encrypted ID</label>
+    <required>true</required>
+    <type>EncryptedString</type>
+  </fields>
+  <fields>
+    <fullName>Encrypted_Income__c</fullName>
+    <externalId>false</externalId>
+    <label>Encrypted Income</label>
+    <required>true</required>
+    <type>EncryptedString</type>
+  </fields>
+  <fields>
+    <fullName>Encrypted_Credit_History__c</fullName>
+    <externalId>false</externalId>
+    <label>Encrypted Credit History</label>
+    <required>true</required>
+    <type>EncryptedString</type>
+  </fields>
+  <fields>
+    <fullName>Encrypted_Employment_Details__c</fullName>
+    <externalId>false</externalId>
+    <label>Encrypted Employment Details</label>
+    <required>true</required>
+    <type>EncryptedString</type>
+  </fields>
+</CustomObject>
