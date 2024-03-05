@@ -1,0 +1,59 @@
+
+<trigger>
+  <name>CreditCheckAndPrequalification</name>
+  <description>Trigger to perform credit check and pre-qualification for loan applicants</description>
+  <event>LoanApplicationSubmitted</event>
+  <conditions>
+    <condition>
+      <name>CreditCheckRequired</name>
+      <expression>applicant.creditScore &lt; 700 || applicant.financialHistory.containsDelinquentAccounts</expression>
+    </condition>
+  </conditions>
+  <actions>
+    <action>
+      <name>PerformCreditCheck</name>
+      <description>Action to perform credit check on loan applicant</description>
+      <type>CreditCheckService</type>
+      <input>
+        <param>
+          <name>applicantId</name>
+          <value>applicant.id</value>
+        </param>
+      </input>
+    </action>
+    <action>
+      <name>PrequalifyApplicant</name>
+      <description>Action to pre-qualify loan applicant based on credit score and financial history</description>
+      <type>PrequalificationService</type>
+      <input>
+        <param>
+          <name>applicantId</name>
+          <value>applicant.id</value>
+        </param>
+        <param>
+          <name>creditScore</name>
+          <value>applicant.creditScore</value>
+        </param>
+        <param>
+          <name>financialHistory</name>
+          <value>applicant.financialHistory</value>
+        </param>
+      </input>
+    </action>
+    <action>
+      <name>NotifyApplicant</name>
+      <description>Action to notify the applicant of the pre-qualification outcome</description>
+      <type>NotificationService</type>
+      <input>
+        <param>
+          <name>applicantId</name>
+          <value>applicant.id</value>
+        </param>
+        <param>
+          <name>prequalificationOutcome</name>
+          <value>prequalification.outcome</value>
+        </param>
+      </input>
+    </action>
+  </actions>
+</trigger>

@@ -1,0 +1,43 @@
+
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>Loan_Applicant__c</name>
+    <label>Loan Applicant</label>
+    <pluralLabel>Loan Applicants</pluralLabel>
+    <fields>
+        <fullName>Credit_Score__c</fullName>
+        <label>Credit Score</label>
+        <type>Number</type>
+        <required>true</required>
+    </fields>
+    <fields>
+        <fullName>Financial_History__c</fullName>
+        <label>Financial History</label>
+        <type>Text</type>
+        <required>true</required>
+    </fields>
+    <fields>
+        <fullName>Pre_Qualified_Loan_Amount__c</fullName>
+        <label>Pre-Qualified Loan Amount</label>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Interest_Rate_Range__c</fullName>
+        <label>Interest Rate Range</label>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Pre_Qualification_Outcome__c</fullName>
+        <label>Pre-Qualification Outcome</label>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>Pre_Qualification_Explanation__c</fullName>
+        <label>Pre-Qualification Explanation</label>
+        <type>Text</type>
+    </fields>
+    <nameField>
+        <label>Loan Applicant Name</label>
+        <type>Text</type>
+        <displayFormat>{LastName}, {FirstName}</displayFormat>
+    </nameField>
+</CustomObject>
